@@ -15,15 +15,26 @@ from health_rag.services.rag_service import RAGService
 logger = logging.getLogger(__name__)
 
 HELP_TEXT = (
-    "I'm a health coach bot. I answer questions from indexed health documents "
-    "using a local LLM.\n\n"
-    "Commands:\n"
-    "/start — Short intro\n"
-    "/help — This message\n"
-    "/ask <your question> — Ask a health question\n\n"
-    "Topics I cover: nutrition, eating habits, exercise, sleep, stress, "
-    "blood pressure, diabetes prevention, and similar lifestyle topics.\n\n"
-    "Off-topic questions get a short reply without document search."
+    """
+Hi! I’m your health coach bot 😊
+
+I can help you with everyday health and lifestyle questions based on reliable information from my knowledge base.
+
+You can ask me things like:
+• What should I eat to stay healthy?
+• How can I reduce blood pressure?
+• Tips for better sleep or stress management
+• Exercise and daily routine advice
+• Diabetes prevention and healthy habits
+
+How to use me:
+/start — Get started
+/help — See this message again
+/ask <your question> — Ask anything health-related
+
+If you ask something outside health topics, I’ll gently let you know I may not be the right bot for that.
+
+Feel free to ask in simple, natural language — I’m here to help!"""
 )
 
 
