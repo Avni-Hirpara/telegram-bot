@@ -1,0 +1,19 @@
+# Telegram bot container. Run Ollama on the host, then:
+#   docker compose build && docker compose up
+#
+# macOS/Windows: OLLAMA_HOST defaults to host.docker.internal.
+# Linux: install Ollama on host and ensure the bot can reach it (e.g. network_mode: host or host IP).
+
+services:
+  bot:
+    build: .
+    env_file:
+      - .env
+    environment:
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+    volumes:
+      - ./var:/app/var
+      - ./Data:/app/Data:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
