@@ -125,7 +125,7 @@ flowchart LR
 
   subgraph Online [Query]
     U[User] --> T[Telegram Bot]
-    T --> R[Retriever (FAISS)]
+    T --> R["Retriever (FAISS)"]
     R --> D
     R --> C
     R --> P[Prompt Builder]
